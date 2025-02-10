@@ -7,6 +7,12 @@ export NVM_DIR="/home/ec2-user/.nvm"
 # Asegurarse de que npm esté en el PATH
 export PATH=$PATH:/home/ec2-user/.nvm/versions/node/$(nvm current)/bin
 
+# Limpiar la caché de npm para evitar problemas con instalaciones previas
+npm cache clean --force
+
+# Eliminar node_modules y package-lock.json para una instalación limpia
+rm -rf node_modules package-lock.json
+
 # Instalar dependencias
 npm install
 
