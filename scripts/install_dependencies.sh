@@ -14,5 +14,5 @@ npm cache clean --force
 rm -rf node_modules package-lock.json
 
 # Instalar dependencias
-npm install
+npm install -g npm@10.8.0
 
